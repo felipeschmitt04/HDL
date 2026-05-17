@@ -1,0 +1,2 @@
+vhdl work "halfadd.vhd"
+vhdl work "halfadd_tb.vhd"

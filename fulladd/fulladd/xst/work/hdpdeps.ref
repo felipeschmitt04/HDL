@@ -1,0 +1,6 @@
+V3 3
+FL /home/ise/ise_projs/fulladd/fulladd.vhd 2026/04/02.13:41:45 P.20131013
+EN work/fulladd 1775137363 FL /home/ise/ise_projs/fulladd/fulladd.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/fulladd/fulladd 1775137364 \
+      FL /home/ise/ise_projs/fulladd/fulladd.vhd EN work/fulladd 1775137363

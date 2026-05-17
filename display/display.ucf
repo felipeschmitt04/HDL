@@ -1,0 +1,28 @@
+net "a[3]" loc = k15;
+net "a[2]" loc = k16;
+net "a[1]" loc = j16;
+net "a[0]" loc = n15;
+
+net "b[3]" loc = n16;
+net "b[2]" loc = m15;
+net "b[1]" loc = m16;
+net "b[0]" loc = l15;
+
+net "clock" loc = a8;
+net "reset" loc = j13;
+
+net "an[0]" loc = g14;
+net "an[1]" loc = g12;
+net "an[2]" loc = g13;
+net "an[3]" loc = f12;
+
+net "dec_ddp[0]" loc = h14;
+net "dec_ddp[1]" loc = g16;
+net "dec_ddp[2]" loc = e14;
+net "dec_ddp[3]" loc = j14;
+net "dec_ddp[4]" loc = h13;
+net "dec_ddp[5]" loc = g15;
+net "dec_ddp[6]" loc = e13;
+net "dec_ddp[7]" loc = f13;
+
+net "carry" loc = l14;

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/ise_projs/halfadd/halfadd/halfadd_tb_isim_beh.exe" -prj "/home/ise/ise_projs/halfadd/halfadd/halfadd_tb_beh.prj" "work.halfadd_tb" 

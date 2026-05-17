@@ -1,0 +1,3 @@
+vhdl work "../fulladd/fulladd.vhd"
+vhdl work "../codigos/DsplDrv_Nexys1-2.vhd"
+vhdl work "top.vhd"

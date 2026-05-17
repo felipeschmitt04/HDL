@@ -1,0 +1,3 @@
+vhdl isim_temp "nand3i.vhd"
+vhdl isim_temp "latch_4inpts.vhd"
+vhdl isim_temp "flipflopd.vhd"

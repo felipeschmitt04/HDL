@@ -1,0 +1,33 @@
+xst -intstyle ise -ifn "/home/ise/ise_projs/display/top_somador_display.xst" -ofn "/home/ise/ise_projs/display/top_somador_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+xst -intstyle ise -ifn "/home/ise/ise_projs/display/top_somador_display.xst" -ofn "/home/ise/ise_projs/display/top_somador_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+xst -intstyle ise -ifn "/home/ise/ise_projs/display/top_somador_display.xst" -ofn "/home/ise/ise_projs/display/top_somador_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_somador_display_map.ncd top_somador_display.ngd top_somador_display.pcf 
+par -w -intstyle ise -ol high -t 1 top_somador_display_map.ncd top_somador_display.ncd top_somador_display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_somador_display.twx top_somador_display.ncd -o top_somador_display.twr top_somador_display.pcf -ucf display.ucf 
+bitgen -intstyle ise -f top_somador_display.ut top_somador_display.ncd 
+xst -intstyle ise -ifn "/home/ise/ise_projs/display/top_somador_display.xst" -ofn "/home/ise/ise_projs/display/top_somador_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_somador_display_map.ncd top_somador_display.ngd top_somador_display.pcf 
+par -w -intstyle ise -ol high -t 1 top_somador_display_map.ncd top_somador_display.ncd top_somador_display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_somador_display.twx top_somador_display.ncd -o top_somador_display.twr top_somador_display.pcf -ucf display.ucf 
+bitgen -intstyle ise -f top_somador_display.ut top_somador_display.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_somador_display_map.ncd top_somador_display.ngd top_somador_display.pcf 
+par -w -intstyle ise -ol high -t 1 top_somador_display_map.ncd top_somador_display.ncd top_somador_display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_somador_display.twx top_somador_display.ncd -o top_somador_display.twr top_somador_display.pcf -ucf display.ucf 
+bitgen -intstyle ise -f top_somador_display.ut top_somador_display.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_somador_display_map.ncd top_somador_display.ngd top_somador_display.pcf 
+par -w -intstyle ise -ol high -t 1 top_somador_display_map.ncd top_somador_display.ncd top_somador_display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_somador_display.twx top_somador_display.ncd -o top_somador_display.twr top_somador_display.pcf -ucf display.ucf 
+bitgen -intstyle ise -f top_somador_display.ut top_somador_display.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc display.ucf -p xc3s200-ft256-4 top_somador_display.ngc top_somador_display.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_somador_display_map.ncd top_somador_display.ngd top_somador_display.pcf 
+par -w -intstyle ise -ol high -t 1 top_somador_display_map.ncd top_somador_display.ncd top_somador_display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_somador_display.twx top_somador_display.ncd -o top_somador_display.twr top_somador_display.pcf -ucf display.ucf 
+bitgen -intstyle ise -f top_somador_display.ut top_somador_display.ncd 

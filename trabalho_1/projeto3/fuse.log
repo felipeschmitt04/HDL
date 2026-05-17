@@ -1,0 +1,22 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ise_projs/trabalho_1/projeto3/projeto3_tb_as_isim_beh.exe -prj /home/ise/ise_projs/trabalho_1/projeto3/projeto3_tb_as_beh.prj work.projeto3_tb_as 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 3
+Turning on mult-threading, number of parallel sub-compilation jobs: 6 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/ise_projs/trabalho_1/projeto3/projeto_3_as.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_1/projeto3/projeto3_tb_as.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 96832 KB
+Fuse CPU Usage: 1110 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture m17_counter_as of entity m17_counter_as [m17_counter_as_default]
+Compiling architecture projeto3_tb_as of entity projeto3_tb_as
+Time Resolution for simulation is 1ps.
+Compiled 6 VHDL Units
+Built simulation executable /home/ise/ise_projs/trabalho_1/projeto3/projeto3_tb_as_isim_beh.exe
+Fuse Memory Usage: 535420 KB
+Fuse CPU Usage: 1340 ms
+GCC CPU Usage: 1590 ms

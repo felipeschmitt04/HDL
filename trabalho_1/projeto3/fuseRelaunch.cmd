@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/ise_projs/trabalho_1/projeto3/projeto3_tb_as_isim_beh.exe" -prj "/home/ise/ise_projs/trabalho_1/projeto3/projeto3_tb_as_beh.prj" "work.projeto3_tb_as" 

@@ -1,0 +1,31 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Apr 07 14:25:24 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "dec_ddp<4>" LOCATE = SITE "H13" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "G14" LEVEL 1;
+COMP "dec_ddp<5>" LOCATE = SITE "G15" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "G12" LEVEL 1;
+COMP "dec_ddp<6>" LOCATE = SITE "E13" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "G13" LEVEL 1;
+COMP "dec_ddp<7>" LOCATE = SITE "F13" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "F12" LEVEL 1;
+COMP "A<0>" LOCATE = SITE "N15" LEVEL 1;
+COMP "A<1>" LOCATE = SITE "J16" LEVEL 1;
+COMP "A<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "A<3>" LOCATE = SITE "K15" LEVEL 1;
+COMP "B<0>" LOCATE = SITE "L15" LEVEL 1;
+COMP "B<1>" LOCATE = SITE "M16" LEVEL 1;
+COMP "B<2>" LOCATE = SITE "M15" LEVEL 1;
+COMP "B<3>" LOCATE = SITE "N16" LEVEL 1;
+COMP "carry" LOCATE = SITE "L14" LEVEL 1;
+COMP "clock" LOCATE = SITE "A8" LEVEL 1;
+COMP "reset" LOCATE = SITE "J13" LEVEL 1;
+COMP "dec_ddp<0>" LOCATE = SITE "H14" LEVEL 1;
+COMP "dec_ddp<1>" LOCATE = SITE "G16" LEVEL 1;
+COMP "dec_ddp<2>" LOCATE = SITE "E14" LEVEL 1;
+COMP "dec_ddp<3>" LOCATE = SITE "J14" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

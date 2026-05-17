@@ -1,0 +1,10 @@
+Command line:
+   transmissor_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52458
+
+Thu May  7 01:20:15 2026
+
+
+ Elaboration Time: 0.07 sec

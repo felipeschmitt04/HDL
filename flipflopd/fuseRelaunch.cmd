@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/ise_projs/flipflopd/latch_4inpts_tb_isim_beh.exe" -prj "/home/ise/ise_projs/flipflopd/latch_4inpts_tb_beh.prj" "work.latch_4inpts_tb" 

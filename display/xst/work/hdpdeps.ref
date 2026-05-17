@@ -1,0 +1,18 @@
+V3 12
+FL /home/ise/ise_projs/codigos/DsplDrv_Nexys1-2.vhd 2026/04/02.14:09:01 P.20131013
+EN work/dspl_drv 1775571139 FL /home/ise/ise_projs/codigos/DsplDrv_Nexys1-2.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dspl_drv/dspl_drv 1775571140 \
+      FL /home/ise/ise_projs/codigos/DsplDrv_Nexys1-2.vhd EN work/dspl_drv 1775571139 \
+      CP with
+FL /home/ise/ise_projs/display/top.vhd 2026/04/07.13:52:47 P.20131013
+EN work/top_somador_display 1775571141 FL /home/ise/ise_projs/display/top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top_somador_display/top_somador_display 1775571142 \
+      FL /home/ise/ise_projs/display/top.vhd EN work/top_somador_display 1775571141 \
+      CP work/fulladd CP work/dspl_drv
+FL /home/ise/ise_projs/fulladd/fulladd.vhd 2026/04/02.13:41:45 P.20131013
+EN work/fulladd 1775571137 FL /home/ise/ise_projs/fulladd/fulladd.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/fulladd/fulladd 1775571138 \
+      FL /home/ise/ise_projs/fulladd/fulladd.vhd EN work/fulladd 1775571137

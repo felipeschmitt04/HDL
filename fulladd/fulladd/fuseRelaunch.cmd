@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/ise_projs/fulladd/fulladd/fulladd_tb_isim_beh.exe" -prj "/home/ise/ise_projs/fulladd/fulladd/fulladd_tb_beh.prj" "work.fulladd_tb" 

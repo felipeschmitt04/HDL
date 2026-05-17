@@ -1,0 +1,6 @@
+AR top_somador_display top_somador_display /home/ise/ise_projs/display/top.vhd sub00/vhpl05 1775571142
+AR fulladd fulladd /home/ise/ise_projs/fulladd/fulladd.vhd sub00/vhpl01 1775571138
+EN fulladd NULL /home/ise/ise_projs/fulladd/fulladd.vhd sub00/vhpl00 1775571137
+EN top_somador_display NULL /home/ise/ise_projs/display/top.vhd sub00/vhpl04 1775571141
+AR dspl_drv dspl_drv /home/ise/ise_projs/codigos/DsplDrv_Nexys1-2.vhd sub00/vhpl03 1775571140
+EN dspl_drv NULL /home/ise/ise_projs/codigos/DsplDrv_Nexys1-2.vhd sub00/vhpl02 1775571139

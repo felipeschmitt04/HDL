@@ -1,0 +1,25 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ise_projs/flipflopd/latch_4inpts_tb_isim_beh.exe -prj /home/ise/ise_projs/flipflopd/latch_4inpts_tb_beh.prj work.latch_4inpts_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 3
+Turning on mult-threading, number of parallel sub-compilation jobs: 6 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/ise_projs/flipflopd/nand3i.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/flipflopd/latch_4inpts.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/flipflopd/flipflopd.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/flipflopd/latch_4intps_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 95304 KB
+Fuse CPU Usage: 1910 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture latch of entity latch_4inpts [latch_4inpts_default]
+Compiling architecture latch_4inpts of entity flipflopd [flipflopd_default]
+Compiling architecture latch_4inpts_tb of entity latch_4inpts_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 VHDL Units
+Built simulation executable /home/ise/ise_projs/flipflopd/latch_4inpts_tb_isim_beh.exe
+Fuse Memory Usage: 527960 KB
+Fuse CPU Usage: 2150 ms
+GCC CPU Usage: 740 ms

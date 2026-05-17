@@ -1,0 +1,490 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: top_somador_display.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_somador_display.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_somador_display"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : top_somador_display
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/ise_projs/fulladd/fulladd.vhd" in Library work.
+Architecture fulladd of Entity fulladd is up to date.
+Compiling vhdl file "/home/ise/ise_projs/codigos/DsplDrv_Nexys1-2.vhd" in Library work.
+Architecture dspl_drv of Entity dspl_drv is up to date.
+Compiling vhdl file "/home/ise/ise_projs/display/top.vhd" in Library work.
+Architecture top_somador_display of Entity top_somador_display is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top_somador_display> in library <work> (architecture <top_somador_display>).
+
+Analyzing hierarchy for entity <fulladd> in library <work> (architecture <fulladd>).
+
+Analyzing hierarchy for entity <dspl_drv> in library <work> (architecture <dspl_drv>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top_somador_display> in library <work> (Architecture <top_somador_display>).
+WARNING:Xst:753 - "/home/ise/ise_projs/display/top.vhd" line 48: Unconnected output port 'vai_um' of component 'fulladd'.
+Entity <top_somador_display> analyzed. Unit <top_somador_display> generated.
+
+Analyzing Entity <fulladd> in library <work> (Architecture <fulladd>).
+Entity <fulladd> analyzed. Unit <fulladd> generated.
+
+Analyzing Entity <dspl_drv> in library <work> (Architecture <dspl_drv>).
+Entity <dspl_drv> analyzed. Unit <dspl_drv> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <fulladd>.
+    Related source file is "/home/ise/ise_projs/fulladd/fulladd.vhd".
+WARNING:Xst:1305 - Output <vai_um> is never assigned. Tied to value 0.
+    Found 5-bit adder for signal <Sum>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <fulladd> synthesized.
+
+
+Synthesizing Unit <dspl_drv>.
+    Related source file is "/home/ise/ise_projs/codigos/DsplDrv_Nexys1-2.vhd".
+    Found 16x7-bit ROM for signal <selected_dig_4_1$rom0000>.
+    Found 4-bit register for signal <an>.
+    Found 4-bit 4-to-1 multiplexer for signal <an$mux0003>.
+    Found 1-bit register for signal <ck_1KHz>.
+    Found 15-bit adder for signal <ck_1KHz$addsub0000> created at line 84.
+    Found 15-bit up counter for signal <count_25K>.
+    Found 2-bit register for signal <dig_selection>.
+    Found 5-bit register for signal <selected_dig>.
+    Found 5-bit 4-to-1 multiplexer for signal <selected_dig$mux0003>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 Multiplexer(s).
+Unit <dspl_drv> synthesized.
+
+
+Synthesizing Unit <top_somador_display>.
+    Related source file is "/home/ise/ise_projs/display/top.vhd".
+Unit <top_somador_display> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 15-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 1
+ 15-bit up counter                                     : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 2-bit register                                        : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+# Multiplexers                                         : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <dspl_drv>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_selected_dig_4_1_rom0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <dspl_drv> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 15-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 1
+ 15-bit up counter                                     : 1
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Multiplexers                                         : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <an_2> (without init value) has a constant value of 1 in block <dspl_drv>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <top_somador_display> ...
+
+Optimizing unit <dspl_drv> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_somador_display, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_somador_display.ngr
+Top Level Output File Name         : top_somador_display
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 23
+
+Cell Usage :
+# BELS                             : 141
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 28
+#      LUT2                        : 5
+#      LUT2_L                      : 1
+#      LUT3                        : 6
+#      LUT4                        : 31
+#      LUT4_D                      : 2
+#      MUXCY                       : 28
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 26
+#      FDC                         : 17
+#      FDCE                        : 1
+#      FDE                         : 5
+#      FDP                         : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 9
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       41  out of   1920     2%  
+ Number of Slice Flip Flops:             26  out of   3840     0%  
+ Number of 4 input LUTs:                 78  out of   3840     2%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    173    13%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)            | Load  |
+-----------------------------------+----------------------------------+-------+
+clock                              | BUFGP                            | 16    |
+inst_display/ck_1KHz               | NONE(inst_display/selected_dig_4)| 10    |
+-----------------------------------+----------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 21    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.476ns (Maximum Frequency: 105.530MHz)
+   Minimum input arrival time before clock: 5.942ns
+   Maximum output required time after clock: 9.121ns
+   Maximum combinational path delay: 12.309ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 9.476ns (frequency: 105.530MHz)
+  Total number of paths / destination ports: 2041 / 17
+-------------------------------------------------------------------------
+Delay:               9.476ns (Levels of Logic = 6)
+  Source:            inst_display/count_25K_1 (FF)
+  Destination:       inst_display/ck_1KHz (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: inst_display/count_25K_1 to inst_display/ck_1KHz
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.720   1.216  inst_display/count_25K_1 (inst_display/count_25K_1)
+     LUT1:I0->O            1   0.551   0.000  inst_display/Madd_ck_1KHz_addsub0000_cy<1>_rt (inst_display/Madd_ck_1KHz_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  inst_display/Madd_ck_1KHz_addsub0000_cy<1> (inst_display/Madd_ck_1KHz_addsub0000_cy<1>)
+     XORCY:CI->O           1   0.904   1.140  inst_display/Madd_ck_1KHz_addsub0000_xor<2> (inst_display/ck_1KHz_addsub0000<2>)
+     LUT2_L:I0->LO         1   0.551   0.126  inst_display/ck_1KHz_cmp_eq00008 (inst_display/ck_1KHz_cmp_eq00008)
+     LUT4:I3->O           16   0.551   1.263  inst_display/ck_1KHz_cmp_eq000022 (inst_display/ck_1KHz_cmp_eq000022)
+     LUT4:I3->O            1   0.551   0.801  inst_display/ck_1KHz_cmp_eq000060 (inst_display/ck_1KHz_cmp_eq0000)
+     FDCE:CE                   0.602          inst_display/ck_1KHz
+    ----------------------------------------
+    Total                      9.476ns (4.930ns logic, 4.546ns route)
+                                       (52.0% logic, 48.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'inst_display/ck_1KHz'
+  Clock period: 3.419ns (frequency: 292.483MHz)
+  Total number of paths / destination ports: 23 / 10
+-------------------------------------------------------------------------
+Delay:               3.419ns (Levels of Logic = 1)
+  Source:            inst_display/dig_selection_1 (FF)
+  Destination:       inst_display/dig_selection_0 (FF)
+  Source Clock:      inst_display/ck_1KHz rising
+  Destination Clock: inst_display/ck_1KHz rising
+
+  Data Path: inst_display/dig_selection_1 to inst_display/dig_selection_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.720   1.144  inst_display/dig_selection_1 (inst_display/dig_selection_1)
+     INV:I->O              1   0.551   0.801  inst_display/dig_selection_not00011_INV_0 (inst_display/dig_selection_not0001)
+     FDC:D                     0.203          inst_display/dig_selection_0
+    ----------------------------------------
+    Total                      3.419ns (1.474ns logic, 1.945ns route)
+                                       (43.1% logic, 56.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'inst_display/ck_1KHz'
+  Total number of paths / destination ports: 31 / 9
+-------------------------------------------------------------------------
+Offset:              5.942ns (Levels of Logic = 4)
+  Source:            A<1> (PAD)
+  Destination:       inst_display/selected_dig_4 (FF)
+  Destination Clock: inst_display/ck_1KHz rising
+
+  Data Path: A<1> to inst_display/selected_dig_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.821   1.246  A_1_IBUF (A_1_IBUF)
+     LUT4:I0->O            2   0.551   1.072  inst_som4_vum/Madd_Sum_xor<3>111 (N01)
+     LUT3:I1->O            2   0.551   0.877  inst_display/Mmux_selected_dig_mux0003958_SW0 (N71)
+     MUXF5:S->O            1   0.621   0.000  inst_display/Mmux_selected_dig_mux0003994_f5 (inst_display/selected_dig_mux0003<4>)
+     FDE:D                     0.203          inst_display/selected_dig_4
+    ----------------------------------------
+    Total                      5.942ns (2.747ns logic, 3.195ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'inst_display/ck_1KHz'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              9.121ns (Levels of Logic = 2)
+  Source:            inst_display/selected_dig_2 (FF)
+  Destination:       dec_ddp<7> (PAD)
+  Source Clock:      inst_display/ck_1KHz rising
+
+  Data Path: inst_display/selected_dig_2 to dec_ddp<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.720   1.405  inst_display/selected_dig_2 (inst_display/selected_dig_2)
+     LUT4:I0->O            1   0.551   0.801  inst_display/Mrom_selected_dig_4_1_rom000021 (dec_ddp_5_OBUF)
+     OBUF:I->O                 5.644          dec_ddp_5_OBUF (dec_ddp<5>)
+    ----------------------------------------
+    Total                      9.121ns (6.915ns logic, 2.206ns route)
+                                       (75.8% logic, 24.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Delay:               12.309ns (Levels of Logic = 5)
+  Source:            A<1> (PAD)
+  Destination:       carry (PAD)
+
+  Data Path: A<1> to carry
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.821   1.246  A_1_IBUF (A_1_IBUF)
+     LUT4:I0->O            2   0.551   1.072  inst_som4_vum/Madd_Sum_xor<3>111 (N01)
+     LUT3:I1->O            2   0.551   1.072  inst_display/Mmux_selected_dig_mux0003958_SW0 (N71)
+     LUT3:I1->O            1   0.551   0.801  inst_som4_vum/Madd_Sum_cy<3>1 (inst_som4_vum/Madd_Sum_cy<3>)
+     OBUF:I->O                 5.644          carry_OBUF (carry)
+    ----------------------------------------
+    Total                     12.309ns (8.118ns logic, 4.191ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 6.02 secs
+ 
+--> 
+
+
+Total memory usage is 609472 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

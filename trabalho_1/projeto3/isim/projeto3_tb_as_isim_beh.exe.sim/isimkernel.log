@@ -1,0 +1,28 @@
+Command line:
+   projeto3_tb_as_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  47507
+
+Wed May  6 14:48:37 2026
+
+
+ Elaboration Time: 0.08 sec
+
+ Current Memory Usage: 205.226 Meg
+
+ Total Signals          : 7
+ Total Nets             : 12
+ Total Signal Drivers   : 4
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 4
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 495
+
+ Total Simulation Time: 0.14 sec
+
+ Current Memory Usage: 282.825 Meg
+
+Wed May  6 15:14:41 2026
+

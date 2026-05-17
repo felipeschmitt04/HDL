@@ -1,0 +1,4 @@
+vhdl work "nand3i.vhd"
+vhdl work "latch_4inpts.vhd"
+vhdl work "flipflopd.vhd"
+vhdl work "latch_4intps_tb.vhd"

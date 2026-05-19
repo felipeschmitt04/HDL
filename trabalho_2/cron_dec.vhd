@@ -33,3 +33,26 @@ ARCHITECTURE cron_dec OF cron_dec IS
 
     TYPE states IS (IDLE, LOAD, COUNT);
     SIGNAL NST, PST: states;
+
+BEGIN
+    -- parte 1: divisor de clock para gerar o ck
+    
+    -- parte 2/3: maquina de estados
+    -- parte 4: contador de segundos
+    -- parte 5: contador de minutos
+
+    -- instanciação das ROMs
+    Segundos_BCD <= conv_to_BCD(to_integer(unsigned(seg)));
+    Minutos_BCD <= conv_to_BCD(to_integer(unsigned(min)));
+
+    -- display driver
+    d1 <= '1' & Segundos_BCD(3 DOWNTO 0) & '1';
+    d2 <= ...
+    d3 <= ...
+    d4 <= ...
+    d5 <= ...
+    d6 <= ...
+
+    display_driver: ENTITY WORK.dspl_drv PORT MAP(
+
+    )

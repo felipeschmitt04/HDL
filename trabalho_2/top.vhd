@@ -3,7 +3,13 @@ USE ieee.STD_LOGIC_1164.ALL;
 
 ENTITY cron_dec IS
     GENERIC(CLOCK_FREQ: integer := 25_000_000);
-    PORT(clock, reset, carga, conta: IN std_logic)
+    PORT(
+        clock, reset, carga, conta: IN std_logic;
+        chaves: IN std_logic_vector(6 DOWNTO 0);
+        parado: OUT std_logic;
+        an: OUT std_logic_vector(3 DOWNTO 0);
+        dec_ddp: OUT std_logic_vector(7 DOWNTO 0)
+    );
 END ENTITY cron_dec;
 
 ARCHITECTURE cron_dec OF cron_dec IS
@@ -33,25 +39,54 @@ ARCHITECTURE cron_dec OF cron_dec IS
 
     TYPE states IS (IDLE, LOAD, COUNT);
     SIGNAL NST, PST: states;
+    SIGNAL ck1seg, carga_out, conta_out, fim_cont: std_logic;
+    SIGNAL seg, min, Segundos_BCD, Minutos_BCD: std_logic_vector(7 DOWNTO 0);
+    SIGNAL d4, d3, d2, d1: std_logic_vector(5 DOWNTO 0);
 
 BEGIN
-    -- parte 1: divisor de clock para gerar o ck
+    U1: ENTITY work.divisor_clock
+        GENERIC MAP(
+            CLOCK_FREQ => CLOCK_FREQ
+        )
+        PORT MAP(
+            clock => clock,
+            reset => reset,
+            ck1seg => ck1seg
+        );
     
-    -- parte 2/3: maquina de estados
-    -- parte 4: contador de segundos
-    -- parte 5: contador de minutos
+    U2: ENTITY work.fsm_cron
+        PORT MAP(
+            clock => clock,
+            reset => reset,
+            carga_btn => carga,
+            conta_btn => conta,
+            fim_cont => fim_cont,
+            carga_out => carga_out,
+            conta_out => conta_out,
+            led_parado => parado
+        );
 
-    -- instanciação das ROMs
+    U3: ENTITY work.contador_dec
+        PORT MAP(
+            clock => clock,
+            reset => reset,
+            chaves => chaves,
+            carga => carga_out,
+            conta => conta_out,
+            ck1seg => ck1seg,
+            seg_out => seg,
+            min_out => min
+        )
+
+    fim_cont <= '1' WHEN (seg = "00000000" AND min = "00000000") ELSE '0';
+
     Segundos_BCD <= conv_to_BCD(to_integer(unsigned(seg)));
     Minutos_BCD <= conv_to_BCD(to_integer(unsigned(min)));
 
-    -- display driver
     d1 <= '1' & Segundos_BCD(3 DOWNTO 0) & '1';
-    d2 <= ...
-    d3 <= ...
-    d4 <= ...
-    d5 <= ...
-    d6 <= ...
+    d2 <= '1' & Segundos_BCD(7 DOWNTO 4) & '1';
+    d3 <= '1' & Minutos_BCD(3 DOWNTO 0) & '0';
+    d4 <= '1' & Minutos_BCD(7 DOWNTO 4) & '1';
 
     display_driver: ENTITY WORK.dspl_drv PORT MAP(
 

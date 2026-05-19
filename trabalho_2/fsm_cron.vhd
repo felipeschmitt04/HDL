@@ -39,9 +39,15 @@ BEGIN
                     proximo_estado <= LOAD;
                 END IF;
             WHEN LOAD =>
-                IF 
+                carga_out <= '1';
+                IF conta_btn = '1' THEN
+                    proximo_estado <= COUNT;
+                END IF;
             WHEN COUNT =>
-
+                conta_out <= '1';
+                IF fim_cont = '1' THEN
+                    proximo_estado <= IDLE
+                END IF;
         END CASE;
     END PROCESS;
 END behavior;

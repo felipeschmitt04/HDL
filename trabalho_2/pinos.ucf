@@ -4,25 +4,25 @@ NET "reset" LOC = "B18";
 NET "conta" LOC = "E18";
 NET "carga" LOC = "H13"; 
 
-NET "chaves<6>" LOC = "N17"; 
-NET "chaves<5>" LOC = "H18"; 
-NET "chaves<4>" LOC = "L14"; 
-NET "chaves<3>" LOC = "L13"; 
-NET "chaves<2>" LOC = "N14"; 
-NET "chaves<0>" LOC = "G18"; 
+NET "chaves[6]" LOC = "N17"; 
+NET "chaves[5]" LOC = "H18"; 
+NET "chaves[4]" LOC = "L14"; 
+NET "chaves[3]" LOC = "L13"; 
+NET "chaves[2]" LOC = "N14"; 
+NET "chaves[0]" LOC = "G18"; 
 
 NET "parado" LOC = "J14"; 
 
-NET "an<3>" LOC = "F17";
-NET "an<2>" LOC = "H17"; 
-NET "an<1>" LOC = "C18"; 
-NET "an<0>" LOC = "F15"; 
+NET "an[3]" LOC = "F17";
+NET "an[2]" LOC = "H17"; 
+NET "an[1]" LOC = "C18"; 
+NET "an[0]" LOC = "F15"; 
 
-NET "dec_ddp<7>" LOC = "L18"; 
-NET "dec_ddp<6>" LOC = "F18"; 
-NET "dec_ddp<5>" LOC = "D17"; 
-NET "dec_ddp<4>" LOC = "D16"; 
-NET "dec_ddp<3>" LOC = "G14";
-NET "dec_ddp<2>" LOC = "J17"; 
-NET "dec_ddp<1>" LOC = "H14";
-NET "dec_ddp<0>" LOC = "C17"; 
+NET "dec_ddp[7]" LOC = "L18"; 
+NET "dec_ddp[6]" LOC = "F18"; 
+NET "dec_ddp[5]" LOC = "D17"; 
+NET "dec_ddp[4]" LOC = "D16"; 
+NET "dec_ddp[3]" LOC = "G14";
+NET "dec_ddp[2]" LOC = "J17"; 
+NET "dec_ddp[1]" LOC = "H14";
+NET "dec_ddp[0]" LOC = "C17"; 

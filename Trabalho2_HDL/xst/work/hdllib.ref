@@ -1,0 +1,10 @@
+AR fsm_cron behavior /home/ise/ise_projs/trabalho_2/fsm_cron.vhd sub00/vhpl03 1779323364
+EN contador_dec NULL /home/ise/ise_projs/trabalho_2/contador_dec.vhd sub00/vhpl04 1779323365
+AR cron_dec cron_dec /home/ise/ise_projs/trabalho_2/top.vhd sub00/vhpl09 1779323370
+EN divisor_clock NULL /home/ise/ise_projs/trabalho_2/divisor_clock.vhd sub00/vhpl00 1779323361
+AR divisor_clock behavior /home/ise/ise_projs/trabalho_2/divisor_clock.vhd sub00/vhpl01 1779323362
+AR contador_dec behavior /home/ise/ise_projs/trabalho_2/contador_dec.vhd sub00/vhpl05 1779323366
+AR dspl_drv dspl_drv /home/ise/ise_projs/trabalho_2/dspl_drv.vhd sub00/vhpl07 1779323368
+EN dspl_drv NULL /home/ise/ise_projs/trabalho_2/dspl_drv.vhd sub00/vhpl06 1779323367
+EN cron_dec NULL /home/ise/ise_projs/trabalho_2/top.vhd sub00/vhpl08 1779323369
+EN fsm_cron NULL /home/ise/ise_projs/trabalho_2/fsm_cron.vhd sub00/vhpl02 1779323363

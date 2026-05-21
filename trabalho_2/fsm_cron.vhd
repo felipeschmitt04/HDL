@@ -8,7 +8,7 @@ ENTITY fsm_cron IS
     );
 END ENTITY fsm_cron;
 
-ARCHITECTURE behavior OF cron_dec IS
+ARCHITECTURE behavior OF fsm_cron IS
     TYPE states IS (IDLE, LOAD, COUNT);
     SIGNAL estado_atual, proximo_estado: states;
 BEGIN
@@ -32,7 +32,6 @@ BEGIN
         proximo_estado <= estado_atual;
         carga_out <= '0';
         conta_out <= '0';
-        led_parado <= '0';
         CASE estado_atual IS
             WHEN IDLE => 
                 IF carga_btn = '1' THEN
@@ -46,7 +45,7 @@ BEGIN
             WHEN COUNT =>
                 conta_out <= '1';
                 IF fim_cont = '1' THEN
-                    proximo_estado <= IDLE
+                    proximo_estado <= IDLE;
                 END IF;
         END CASE;
     END PROCESS;

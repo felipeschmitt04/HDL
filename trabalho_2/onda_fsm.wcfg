@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/ise_projs/Trabalho2_HDL/tb_fsm_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_fsm" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/tb_fsm/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fsm/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fsm/carga_btn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">carga_btn</obj_property>
+      <obj_property name="ObjectShortName">carga_btn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fsm/conta_btn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">conta_btn</obj_property>
+      <obj_property name="ObjectShortName">conta_btn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fsm/fim_cont" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fim_cont</obj_property>
+      <obj_property name="ObjectShortName">fim_cont</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fsm/carga_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">carga_out</obj_property>
+      <obj_property name="ObjectShortName">carga_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fsm/conta_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">conta_out</obj_property>
+      <obj_property name="ObjectShortName">conta_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_fsm/led_parado" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">led_parado</obj_property>
+      <obj_property name="ObjectShortName">led_parado</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,6 @@
+vhdl work "../trabalho_2/fsm_cron.vhd"
+vhdl work "../trabalho_2/dspl_drv.vhd"
+vhdl work "../trabalho_2/divisor_clock.vhd"
+vhdl work "../trabalho_2/contador_dec.vhd"
+vhdl work "../trabalho_2/top.vhd"
+vhdl work "../trabalho_2/top_tb.vhd"

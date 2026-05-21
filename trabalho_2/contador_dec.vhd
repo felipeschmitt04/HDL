@@ -23,7 +23,11 @@ BEGIN
         ELSIF rising_edge(clock) THEN
             IF carga = '1' THEN
                 cont_seg <= 0;
-                cont_min <= to_integer(unsigned(chaves));
+                IF to_integer(unsigned(chaves)) > 99 THEN
+                    cont_min <= 99;
+                ELSE
+                    cont_min <= to_integer(unsigned(chaves));
+                END IF;
             ELSIF conta = '1' AND ck1seg = '1' THEN
                 IF cont_seg = 0 THEN
                     cont_seg <= 59;

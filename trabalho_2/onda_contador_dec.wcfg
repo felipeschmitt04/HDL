@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/ise_projs/Trabalho2_HDL/tb_contador_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_contador" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/tb_contador/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_contador/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_contador/carga" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">carga</obj_property>
+      <obj_property name="ObjectShortName">carga</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_contador/conta" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">conta</obj_property>
+      <obj_property name="ObjectShortName">conta</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_contador/ck1seg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ck1seg</obj_property>
+      <obj_property name="ObjectShortName">ck1seg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_contador/chaves" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">chaves[6:0]</obj_property>
+      <obj_property name="ObjectShortName">chaves[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_contador/seg_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">seg_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seg_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_contador/min_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">min_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">min_out[7:0]</obj_property>
+   </wvobject>
+</wave_config>

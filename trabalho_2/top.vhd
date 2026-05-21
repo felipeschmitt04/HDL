@@ -1,8 +1,9 @@
 LIBRARY ieee;
 USE ieee.STD_LOGIC_1164.ALL;
+USE ieee.numeric_std.ALL;
 
 ENTITY cron_dec IS
-    GENERIC(CLOCK_FREQ: integer := 25_000_000);
+    GENERIC(CLOCK_FREQ: integer := 50_000_000);
     PORT(
         clock, reset, carga, conta: IN std_logic;
         chaves: IN std_logic_vector(6 DOWNTO 0);
@@ -13,7 +14,6 @@ ENTITY cron_dec IS
 END ENTITY cron_dec;
 
 ARCHITECTURE cron_dec OF cron_dec IS
-    -- Sinais aqui
     type ROM is array (0 to 99) of std_logic_vector (7 downto 0);
     constant conv_to_BCD : ROM:=(
         "00000000", "00000001", "00000010", "00000011", "00000100",
@@ -42,7 +42,7 @@ ARCHITECTURE cron_dec OF cron_dec IS
     SIGNAL ck1seg, carga_out, conta_out, fim_cont: std_logic;
     SIGNAL seg, min, Segundos_BCD, Minutos_BCD: std_logic_vector(7 DOWNTO 0);
     SIGNAL d4, d3, d2, d1: std_logic_vector(5 DOWNTO 0);
-
+ 
 BEGIN
     U1: ENTITY work.divisor_clock
         GENERIC MAP(
@@ -76,7 +76,7 @@ BEGIN
             ck1seg => ck1seg,
             seg_out => seg,
             min_out => min
-        )
+        );
 
     fim_cont <= '1' WHEN (seg = "00000000" AND min = "00000000") ELSE '0';
 
@@ -88,6 +88,15 @@ BEGIN
     d3 <= '1' & Minutos_BCD(3 DOWNTO 0) & '0';
     d4 <= '1' & Minutos_BCD(7 DOWNTO 4) & '1';
 
-    display_driver: ENTITY WORK.dspl_drv PORT MAP(
-
-    )
+    display_driver: ENTITY WORK.dspl_drv
+			PORT MAP(
+				clock => clock,
+				reset => reset,
+				d3 => d4,
+				d2 => d3,
+				d1 => d2,
+				d0 => d1,
+				an => an,
+				dec_ddp => dec_ddp
+			);
+END cron_dec;

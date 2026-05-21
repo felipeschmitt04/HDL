@@ -1,0 +1,30 @@
+V3 20
+FL /home/ise/ise_projs/trabalho_2/contador_dec.vhd 2026/05/21.00:26:51 P.20131013
+EN work/contador_dec 1779323365 \
+      FL /home/ise/ise_projs/trabalho_2/contador_dec.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/contador_dec/behavior 1779323366 \
+      FL /home/ise/ise_projs/trabalho_2/contador_dec.vhd EN work/contador_dec 1779323365
+FL /home/ise/ise_projs/trabalho_2/divisor_clock.vhd 2026/05/19.14:59:30 P.20131013
+EN work/divisor_clock 1779323361 \
+      FL /home/ise/ise_projs/trabalho_2/divisor_clock.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/divisor_clock/behavior 1779323362 \
+      FL /home/ise/ise_projs/trabalho_2/divisor_clock.vhd EN work/divisor_clock 1779323361
+FL /home/ise/ise_projs/trabalho_2/dspl_drv.vhd 2026/05/19.14:59:30 P.20131013
+EN work/dspl_drv 1779323367 FL /home/ise/ise_projs/trabalho_2/dspl_drv.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dspl_drv/dspl_drv 1779323368 \
+      FL /home/ise/ise_projs/trabalho_2/dspl_drv.vhd EN work/dspl_drv 1779323367 \
+      CP with
+FL /home/ise/ise_projs/trabalho_2/fsm_cron.vhd 2026/05/19.23:40:22 P.20131013
+EN work/fsm_cron 1779323363 FL /home/ise/ise_projs/trabalho_2/fsm_cron.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/fsm_cron/behavior 1779323364 \
+      FL /home/ise/ise_projs/trabalho_2/fsm_cron.vhd EN work/fsm_cron 1779323363
+FL /home/ise/ise_projs/trabalho_2/top.vhd 2026/05/21.00:08:14 P.20131013
+EN work/cron_dec 1779323369 FL /home/ise/ise_projs/trabalho_2/top.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/cron_dec/cron_dec 1779323370 \
+      FL /home/ise/ise_projs/trabalho_2/top.vhd EN work/cron_dec 1779323369 \
+      CP work/divisor_clock CP work/fsm_cron CP work/contador_dec CP work/dspl_drv

@@ -1,0 +1,37 @@
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/ise_projs/trabalho_2/pinos.ucf -p xc3s200-ft256-4 cron_dec.ngc cron_dec.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o cron_dec_map.ncd cron_dec.ngd cron_dec.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/ise_projs/trabalho_2/pinos.ucf -p xc3s200-ft256-4 cron_dec.ngc cron_dec.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o cron_dec_map.ncd cron_dec.ngd cron_dec.pcf 
+par -w -intstyle ise -ol high -t 1 cron_dec_map.ncd cron_dec.ncd cron_dec.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml cron_dec.twx cron_dec.ncd -o cron_dec.twr cron_dec.pcf 
+bitgen -intstyle ise -f cron_dec.ut cron_dec.ncd 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/ise_projs/trabalho_2/pinos.ucf -p xc3s200-ft256-4 cron_dec.ngc cron_dec.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o cron_dec_map.ncd cron_dec.ngd cron_dec.pcf 
+par -w -intstyle ise -ol high -t 1 cron_dec_map.ncd cron_dec.ncd cron_dec.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml cron_dec.twx cron_dec.ncd -o cron_dec.twr cron_dec.pcf 
+bitgen -intstyle ise -f cron_dec.ut cron_dec.ncd 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/ise_projs/trabalho_2/pinos.ucf -p xc3s200-ft256-4 cron_dec.ngc cron_dec.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o cron_dec_map.ncd cron_dec.ngd cron_dec.pcf 
+par -w -intstyle ise -ol high -t 1 cron_dec_map.ncd cron_dec.ncd cron_dec.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml cron_dec.twx cron_dec.ncd -o cron_dec.twr cron_dec.pcf 
+bitgen -intstyle ise -f cron_dec.ut cron_dec.ncd 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/ise_projs/trabalho_2/pinos.ucf -p xc3s200-ft256-4 cron_dec.ngc cron_dec.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o cron_dec_map.ncd cron_dec.ngd cron_dec.pcf 
+par -w -intstyle ise -ol high -t 1 cron_dec_map.ncd cron_dec.ncd cron_dec.pcf 
+xst -intstyle ise -ifn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.xst" -ofn "/home/ise/ise_projs/Trabalho2_HDL/cron_dec.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/ise_projs/trabalho_2/pinos.ucf -p xc3s200-ft256-4 cron_dec.ngc cron_dec.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o cron_dec_map.ncd cron_dec.ngd cron_dec.pcf 
+par -w -intstyle ise -ol high -t 1 cron_dec_map.ncd cron_dec.ncd cron_dec.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml cron_dec.twx cron_dec.ncd -o cron_dec.twr cron_dec.pcf 
+bitgen -intstyle ise -f cron_dec.ut cron_dec.ncd 

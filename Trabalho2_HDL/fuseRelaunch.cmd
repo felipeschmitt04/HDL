@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/ise_projs/Trabalho2_HDL/tb_cron_dec_isim_beh.exe" -prj "/home/ise/ise_projs/Trabalho2_HDL/tb_cron_dec_beh.prj" "work.tb_cron_dec" 

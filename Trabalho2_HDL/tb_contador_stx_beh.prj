@@ -1,0 +1,2 @@
+vhdl isim_temp "../trabalho_2/contador_dec.vhd"
+vhdl isim_temp "../trabalho_2/contador_dec_tb.vhd"

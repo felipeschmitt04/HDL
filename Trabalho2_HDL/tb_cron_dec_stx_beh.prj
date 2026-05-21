@@ -1,0 +1,6 @@
+vhdl isim_temp "../trabalho_2/fsm_cron.vhd"
+vhdl isim_temp "../trabalho_2/dspl_drv.vhd"
+vhdl isim_temp "../trabalho_2/divisor_clock.vhd"
+vhdl isim_temp "../trabalho_2/contador_dec.vhd"
+vhdl isim_temp "../trabalho_2/top.vhd"
+vhdl isim_temp "../trabalho_2/top_tb.vhd"

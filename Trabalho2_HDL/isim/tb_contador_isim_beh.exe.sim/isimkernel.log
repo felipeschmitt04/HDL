@@ -1,0 +1,10 @@
+Command line:
+   tb_contador_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60831
+
+Wed May 20 20:34:15 2026
+
+
+ Elaboration Time: 0.16 sec

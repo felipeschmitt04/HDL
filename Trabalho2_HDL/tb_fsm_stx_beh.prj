@@ -1,0 +1,2 @@
+vhdl isim_temp "../trabalho_2/fsm_cron.vhd"
+vhdl isim_temp "../trabalho_2/fsm_cron_tb.vhd"

@@ -37,6 +37,11 @@ BEGIN
                     conta_cent <= 0;
                     passou_1seg <= '0';
                 END IF;
+            ELSIF EA = "11" THEN
+                IF carga = '1' THEN
+                    conta_cent <= 0;
+                    passou_1seg <= '0';
+                END IF;
             ELSE
                 conta_cent <= 0;
                 passou_1seg <= '0';

@@ -38,6 +38,16 @@ BEGIN
                     conta_seg <= 0;
                     passou_1min <= '0';
                 END IF;
+            ELSIF EA = "11" AND carga = '1' THEN
+                IF c_seg = "00" THEN
+                    conta_seg <= 0;
+                ELSIF c_seg = "01" THEN
+                    conta_seg <= 15;
+                ELSIF conta_seg = "10" THEN
+                    conta_seg <= 30;
+                ELSIF conta_seg = "11" THEN
+                    conta_seg <= 45;
+                END IF;
             ELSE
                 conta_seg <= 0;
                 passou_1min <= '0';

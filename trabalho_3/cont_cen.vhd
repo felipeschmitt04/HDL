@@ -7,11 +7,10 @@ ENTITY cont_1cent IS
         clock: IN std_logic;
         reset: IN std_logic;
         fim_quarto: IN std_logic;
-        modo_novoquarto: IN std_logic;
-        fim_jogo: IN std_logic;
         EA: IN std_logic_vector(1 DOWNTO 0);
         passou_1cent: IN std_logic;
-        centesimos: OUT std_logic_vector(7 DOWNTO 0);
+        carga: IN std_logic;
+        centesimos: OUT std_logic_vector(6 DOWNTO 0);
         passou_1seg: OUT std_logic
     );
 END ENTITY cont_1cent;
@@ -24,11 +23,25 @@ BEGIN
         IF reset = '1' THEN
             conta_cent <= 0;
             passou_1seg <= '0';
-        ELSIF rising_edge(clock) AND EA = "10" THEN
-            IF passou_1cent = '1' AND fim_quarto = '0' THEN
-                
+        ELSIF rising_edge(clock) THEN
+            IF EA = "10" THEN
+                IF passou_1cent = '1' AND fim_quarto = '0' THEN
+                    IF conta_cent = 0 THEN
+                        conta_cent <= 99;
+                        passou_1seg <= '1';
+                    ELSE
+                        conta_cent <= conta_cent - 1;
+                        passou_1seg <= '0';
+                    END IF;
+                ELSIF fim_quarto = '1' THEN
+                    conta_cent <= 0;
+                    passou_1seg <= '0';
+                END IF;
+            ELSE
+                conta_cent <= 0;
+                passou_1seg <= '0';
             END IF;
         END IF;
     END PROCESS;
-    centesimos <= std_logic_vector(to_unsigned(conta_cent, 8));
+    centesimos <= std_logic_vector(to_unsigned(conta_cent, 7));
 END behavior;

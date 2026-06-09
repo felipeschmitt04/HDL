@@ -17,13 +17,13 @@ ARCHITECTURE behavior OF tb_cont IS
     SIGNAL passou_1seg: std_logic := '0';
     SIGNAL passou_1min: std_logic := '0';
     SIGNAL carga: std_logic := '0';
-    SIGNAL c_seg: std_logic_vector(1 DOWNTO 0) := "00";
-    SIGNAL c_min: std_logic_vector(3 DOWNTO 0) := "0000";
-    SIGNAL c_quarto: std_logic_vector(1 DOWNTO 0) := "00";
-    SIGNAL centesimos: std_logic_vector(6 DOWNTO 0);
-    SIGNAL segundos: std_logic_vector(5 DOWNTO 0);
-    SIGNAL minutos: std_logic_vector;
-    SIGNAL quarto: integer RANGE 1 TO 4 := 1;
+    SIGNAL c_seg: std_logic_vector(1 DOWNTO 0) := std_logic_vector(to_unsigned(0, 2));
+    SIGNAL c_min: std_logic_vector(3 DOWNTO 0) := std_logic_vector(to_unsigned(0, 4));
+    SIGNAL c_quarto: std_logic_vector(1 DOWNTO 0) := std_logic_vector(to_unsigned(0, 2));
+    SIGNAL centesimos: std_logic_vector(6 DOWNTO 0) := std_logic_vector(to_unsigned(0, 7));
+    SIGNAL segundos: std_logic_vector(5 DOWNTO 0) := std_logic_vector(to_unsigned(0, 6));
+    SIGNAL minutos: std_logic_vector(3 DOWNTO 0) := std_logic_vector(to_unsigned(0, 4));
+    SIGNAL quarto: std_logic_vector(1 DOWNTO 0) := std_logic_vector(to_unsigned(0, 2));
 
 BEGIN
     UUT1_divisor_clk: ENTITY work.divisor_clock
@@ -43,9 +43,9 @@ BEGIN
             fim_quarto => fim_quarto,
             EA => EA,
             passou_1cent => passou_1cent,
-				modo_novoquarto => modo_novoquarto,
+			modo_novoquarto => modo_novoquarto,
             carga => carga,
-            centesimos => std_logic_vector(to_unsigned(centesimos, 7)),
+            centesimos => centesimos,
             passou_1seg => passou_1seg
         );
 
@@ -56,10 +56,10 @@ BEGIN
             fim_quarto => fim_quarto,
             EA => EA,
             passou_1seg => passou_1seg,
-				modo_novoquarto => modo_novoquarto,
+			modo_novoquarto => modo_novoquarto,
             carga => carga,
             c_seg => c_seg,
-            segundos => std_logic_vector,
+            segundos => segundos,
             passou_1min => passou_1min
         );
     
@@ -89,33 +89,65 @@ BEGIN
             fim_jogo => fim_jogo
         );
 
-    clock_process: PROCESS
-    BEGIN
-        clock <= '0';
-        WAIT FOR 10 ns;
-        clock <= '1';
-        WAIT FOR 10 ns;
-    END PROCESS;
+    fim_quarto <= '1' WHEN (minutos = "0000" AND segundos = "000000" AND centesimos = "0000000") ELSE '0';
 
-    reset_process: PROCESS
+    tb_process: PROCESS
     BEGIN
         reset <= '1';
-        WAIT FOR 40 ns; 
+        EA <= "00";
+        modo_nba <= '0';
+        WAIT FOR 40 ns;
+        
         reset <= '0';
-        WAIT; 
-    END PROCESS;
-
-    ea_process: PROCESS
-    BEGIN
         EA <= "01";
-        WAIT FOR 60 ns;
-        EA <= "10";
-        WAIT FOR 2000 ns;
-        EA <= "11";
+        WAIT FOR 100 ns;
+
+        c_quarto <= "00";
+        c_min <= std_logic_vector(to_unsigned(0, 4));
+        c_seg <= "00";
+        
+        carga <= '1';
         WAIT FOR 20 ns;
+        carga <= '0';
+        WAIT FOR 60 ns;
+
         EA <= "10";
-        WAIT FOR 2000 ns;
+        
+        WAIT UNTIL fim_quarto = '1'; 
+        
         EA <= "11";
+        WAIT FOR 100 ns;
+
+        modo_novoquarto <= '1';
+        WAIT FOR 20 ns;
+        modo_novoquarto <= '0';
+        EA <= "01";
+        WAIT FOR 100 ns;
+
+        EA <= "10";
+        WAIT FOR 500 ns;
+        EA <= "11";
+        WAIT FOR 200 ns;
+        
+        c_quarto <= "11";
+        c_min <= std_logic_vector(to_unsigned(0, 4));
+        c_seg <= "00";
+        
+        carga <= '1';
+        WAIT FOR 20 ns;
+        carga <= '0';
+        WAIT FOR 60 ns;
+
+        EA <= "10";
+        WAIT UNTIL fim_quarto = '1';
+        EA <= "11";
+        WAIT FOR 100 ns;
+
+        modo_novoquarto <= '1';
+        WAIT FOR 20 ns;
+        modo_novoquarto <= '0';
+        WAIT FOR 100 ns;
+
         WAIT;
     END PROCESS;
 

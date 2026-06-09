@@ -7,7 +7,7 @@ END ENTITY tb_divisor_clock;
 ARCHITECTURE behavior OF tb_divisor_clock IS
     SIGNAL clock: std_logic := '0';
     SIGNAL reset: std_logic := '0';
-    SIGNAL passou_1cen: std_logic;
+    SIGNAL passou_1cent: std_logic;
 BEGIN
     UUT: ENTITY work.divisor_clock
         GENERIC MAP(
@@ -16,7 +16,7 @@ BEGIN
         PORT MAP(
             clock => clock,
             reset => reset,
-            passou_1cen => passou_1cen
+            passou_1cent => passou_1cent
         );
     clock_process: PROCESS
     BEGIN

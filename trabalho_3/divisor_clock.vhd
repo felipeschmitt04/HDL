@@ -8,7 +8,7 @@ ENTITY divisor_clock IS
     );
     PORT(
         clock, reset: IN std_logic;
-        passou_1cen: OUT std_logic
+        passou_1cent: OUT std_logic
     );
 END ENTITY divisor_clock;
 
@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         IF reset = '1' THEN
             contador <= 0;
-            passou_1cen <= '0';
+            passou_1cent <= '0';
         ELSIF rising_edge(clock) THEN
             IF contador = (CLOCK_FREQ - 1) THEN
                 contador <= 0;
-                passou_1cen <= '1';
+                passou_1cent <= '1';
             ELSE
                 contador <= contador + 1;
-                passou_1cen <= '0';
+                passou_1cent <= '0';
             END IF;
         END IF;
     END PROCESS;

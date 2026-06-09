@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY cont_1cent IS
+ENTITY cont_cent IS
     PORT(
         clock: IN std_logic;
         reset: IN std_logic;
@@ -13,9 +13,9 @@ ENTITY cont_1cent IS
         centesimos: OUT std_logic_vector(6 DOWNTO 0);
         passou_1seg: OUT std_logic
     );
-END ENTITY cont_1cent;
+END ENTITY cont_cent;
 
-ARCHITECTURE behavior OF cont_1cent IS
+ARCHITECTURE behavior OF cont_cent IS
     SIGNAL conta_cent: integer RANGE 0 TO 99 := 0;
 BEGIN
     PROCESS(clock, reset)
@@ -39,6 +39,9 @@ BEGIN
                 END IF;
             ELSIF EA = "11" THEN
                 IF carga = '1' THEN
+                    conta_cent <= 0;
+                    passou_1seg <= '0';
+                ELSIF modo_novoquarto = '1' THEN
                     conta_cent <= 0;
                     passou_1seg <= '0';
                 END IF;

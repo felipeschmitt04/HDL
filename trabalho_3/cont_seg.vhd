@@ -9,6 +9,7 @@ ENTITY cont_seg IS
         fim_quarto: IN std_logic;
         EA: IN std_logic_vector(1 DOWNTO 0);
         passou_1seg: IN std_logic;
+		  modo_novoquarto: IN std_logic;
         carga: IN std_logic;
         c_seg: IN std_logic_vector(1 DOWNTO 0);
         segundos: OUT std_logic_vector(5 DOWNTO 0);
@@ -39,17 +40,17 @@ BEGIN
                     passou_1min <= '0';
                 END IF;
             ELSIF EA = "11" THEN
-                IF carga = "1" THEN
+                IF carga = '1' THEN
                     IF c_seg = "00" THEN
                         conta_seg <= 0;
                     ELSIF c_seg = "01" THEN
                         conta_seg <= 15;
-                    ELSIF conta_seg = "10" THEN
+                    ELSIF c_seg = "10" THEN
                         conta_seg <= 30;
-                    ELSIF conta_seg = "11" THEN
+                    ELSIF c_seg = "11" THEN
                         conta_seg <= 45;
                     END IF;
-                ELSIF modo_novoquarto = "1" THEN
+                ELSIF modo_novoquarto = '1' THEN
                     conta_seg <= 0;
                     passou_1min <= '0';
                 END IF;

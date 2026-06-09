@@ -1,4 +1,4 @@
-LIBRARY iee;
+LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
@@ -18,11 +18,11 @@ ARCHITECTURE behavior OF tb_cont IS
     SIGNAL passou_1min: std_logic := '0';
     SIGNAL carga: std_logic := '0';
     SIGNAL c_seg: std_logic_vector(1 DOWNTO 0) := "00";
-    SIGNAL c_min: integer RANGE 0 TO 12 := 12;
+    SIGNAL c_min: std_logic_vector(3 DOWNTO 0) := "0000";
     SIGNAL c_quarto: std_logic_vector(1 DOWNTO 0) := "00";
-    SIGNAL centesimos: integer RANGE 0 TO 99 := 0;
-    SIGNAL segundos: integer RANGE 0 TO 59 := 0;
-    SIGNAL minutos: integer RANGE 0 TO 12 := 12;
+    SIGNAL centesimos: std_logic_vector(6 DOWNTO 0);
+    SIGNAL segundos: std_logic_vector(5 DOWNTO 0);
+    SIGNAL minutos: std_logic_vector;
     SIGNAL quarto: integer RANGE 1 TO 4 := 1;
 
 BEGIN
@@ -43,10 +43,11 @@ BEGIN
             fim_quarto => fim_quarto,
             EA => EA,
             passou_1cent => passou_1cent,
+				modo_novoquarto => modo_novoquarto,
             carga => carga,
             centesimos => std_logic_vector(to_unsigned(centesimos, 7)),
             passou_1seg => passou_1seg
-        )
+        );
 
     UUT3_cont_seg: ENTITY work.cont_seg
         PORT MAP(
@@ -55,11 +56,12 @@ BEGIN
             fim_quarto => fim_quarto,
             EA => EA,
             passou_1seg => passou_1seg,
+				modo_novoquarto => modo_novoquarto,
             carga => carga,
             c_seg => c_seg,
-            segundos => segundos,
+            segundos => std_logic_vector,
             passou_1min => passou_1min
-        )
+        );
     
     UUT4_cont_min: ENTITY work.cont_min
         PORT MAP(
@@ -73,7 +75,7 @@ BEGIN
             c_min => c_min,
             minutos => minutos,
             fim_quarto => fim_quarto
-        )
+        );
 
     UUT5_cont_quarto: ENTITY work.cont_quarto
         PORT MAP(
@@ -85,7 +87,7 @@ BEGIN
             c_quarto => c_quarto,
             quarto => quarto,
             fim_jogo => fim_jogo
-        )
+        );
 
     clock_process: PROCESS
     BEGIN

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2026-05-21T13:57:52</DateModified>
+  <DateModified>2026-06-09T01:15:36</DateModified>
   <ModuleName>debounce</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/ise_projs/trabalho_3/iseconfig/debounce.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/ise_projs/trabalho_3</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/ise_projs/trabalho_3/iseconfig/Debounce.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/ise_projs/trabalho_3/</ImplementationReportsDirectory>
   <DateInitialized>2026-05-21T13:57:52</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

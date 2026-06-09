@@ -1,0 +1,6 @@
+vhdl isim_temp "divisor_clock.vhd"
+vhdl isim_temp "cont_seg.vhd"
+vhdl isim_temp "cont_quarto.vhd"
+vhdl isim_temp "cont_min.vhd"
+vhdl isim_temp "cont_cen.vhd"
+vhdl isim_temp "cont_tb.vhd"

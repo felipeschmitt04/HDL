@@ -9,6 +9,7 @@ ENTITY cont_cent IS
         fim_quarto: IN std_logic;
         EA: IN std_logic_vector(1 DOWNTO 0);
         passou_1cent: IN std_logic;
+		  modo_novoquarto: IN std_logic;
         carga: IN std_logic;
         centesimos: OUT std_logic_vector(6 DOWNTO 0);
         passou_1seg: OUT std_logic

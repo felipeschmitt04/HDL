@@ -91,15 +91,23 @@ BEGIN
 
     fim_quarto <= '1' WHEN (minutos = "0000" AND segundos = "000000" AND centesimos = "0000000") ELSE '0';
 
+    clock_process: PROCESS
+    BEGIN
+        clock <= '0';
+        WAIT FOR 10 ns;
+        clock <= '1';
+        WAIT FOR 10 ns;
+    END PROCESS;
+
     tb_process: PROCESS
     BEGIN
         reset <= '1';
-        EA <= "00";
-        modo_nba <= '0';
+        EA <= "00"; 
+        modo_nba <= '0'; 
         WAIT FOR 40 ns;
         
         reset <= '0';
-        EA <= "01";
+        EA <= "10"; 
         WAIT FOR 100 ns;
 
         c_quarto <= "00";

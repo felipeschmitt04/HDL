@@ -7,7 +7,8 @@ ENTITY divisor_clock IS
         CLOCK_FREQ: integer := 500000
     );
     PORT(
-        clock, reset: IN std_logic;
+        clock: IN std_logic;
+        reset: IN std_logic;
         passou_1cent: OUT std_logic
     );
 END ENTITY divisor_clock;

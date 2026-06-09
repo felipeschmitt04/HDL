@@ -43,10 +43,11 @@ BEGIN
             fim_quarto => fim_quarto,
             EA => EA,
             passou_1cent => passou_1cent,
-			modo_novoquarto => modo_novoquarto,
+            modo_novoquarto => modo_novoquarto,
             carga => carga,
             centesimos => centesimos,
-            passou_1seg => passou_1seg
+            passou_1seg => passou_1seg,
+            fim_jogo => fim_jogo
         );
 
     UUT3_cont_seg: ENTITY work.cont_seg
@@ -56,11 +57,12 @@ BEGIN
             fim_quarto => fim_quarto,
             EA => EA,
             passou_1seg => passou_1seg,
-			modo_novoquarto => modo_novoquarto,
+            modo_novoquarto => modo_novoquarto,
             carga => carga,
             c_seg => c_seg,
             segundos => segundos,
-            passou_1min => passou_1min
+            passou_1min => passou_1min,
+            fim_jogo => fim_jogo
         );
     
     UUT4_cont_min: ENTITY work.cont_min
@@ -74,7 +76,8 @@ BEGIN
             carga => carga,
             c_min => c_min,
             minutos => minutos,
-            fim_quarto => fim_quarto
+            fim_quarto => fim_quarto,
+            fim_jogo => fim_jogo
         );
 
     UUT5_cont_quarto: ENTITY work.cont_quarto
@@ -90,6 +93,7 @@ BEGIN
         );
 
     fim_quarto <= '1' WHEN (minutos = "0000" AND segundos = "000000" AND centesimos = "0000000") ELSE '0';
+    fim_jogo <= '1' WHEN (quarto = "11" AND fim_quarto = '1') ELSE '0';
 
     clock_process: PROCESS
     BEGIN

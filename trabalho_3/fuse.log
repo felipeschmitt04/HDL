@@ -1,31 +1,22 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ise_projs/trabalho_3/tb_cont_isim_beh.exe -prj /home/ise/ise_projs/trabalho_3/tb_cont_beh.prj work.tb_cont 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ise_projs/trabalho_3/tb_fsm_isim_beh.exe -prj /home/ise/ise_projs/trabalho_3/tb_fsm_beh.prj work.tb_fsm 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 3
 Turning on mult-threading, number of parallel sub-compilation jobs: 6 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/ise/ise_projs/trabalho_3/divisor_clock.vhd" into library work
-Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_seg.vhd" into library work
-Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_quarto.vhd" into library work
-Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_min.vhd" into library work
-Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_cen.vhd" into library work
-Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_tb.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/fsm.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/fsm_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 96844 KB
-Fuse CPU Usage: 1180 ms
+Fuse Memory Usage: 95320 KB
+Fuse CPU Usage: 1260 ms
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package numeric_std
-Compiling architecture behavior of entity divisor_clock [\divisor_clock(4)\]
-Compiling architecture behavior of entity cont_cent [cont_cent_default]
-Compiling architecture behavior of entity cont_seg [cont_seg_default]
-Compiling architecture behavior of entity cont_min [cont_min_default]
-Compiling architecture behavior of entity cont_quarto [cont_quarto_default]
-Compiling architecture behavior of entity tb_cont
+Compiling architecture behavior of entity fsm [fsm_default]
+Compiling architecture behavior of entity tb_fsm
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 14 VHDL Units
-Built simulation executable /home/ise/ise_projs/trabalho_3/tb_cont_isim_beh.exe
-Fuse Memory Usage: 535628 KB
-Fuse CPU Usage: 1550 ms
-GCC CPU Usage: 2940 ms
+Compiled 5 VHDL Units
+Built simulation executable /home/ise/ise_projs/trabalho_3/tb_fsm_isim_beh.exe
+Fuse Memory Usage: 527936 KB
+Fuse CPU Usage: 1390 ms
+GCC CPU Usage: 350 ms

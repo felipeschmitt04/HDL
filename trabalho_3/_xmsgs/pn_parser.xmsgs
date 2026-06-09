@@ -26,5 +26,8 @@
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/ise_projs/trabalho_3/divisor_clock.vhd&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/ise_projs/trabalho_3/fsm.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 

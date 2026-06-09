@@ -102,27 +102,30 @@ BEGIN
     tb_process: PROCESS
     BEGIN
         reset <= '1';
-        EA <= "00"; 
-        modo_nba <= '0'; 
+        EA <= "00";
+        modo_nba <= '0';
         WAIT FOR 40 ns;
-        
+
         reset <= '0';
-        EA <= "10"; 
+        EA <= "01";
         WAIT FOR 100 ns;
+
+        EA <= "10";
+        WAIT FOR 400 ns;
+
+        EA <= "11";
+        WAIT FOR 60 ns;
 
         c_quarto <= "00";
         c_min <= std_logic_vector(to_unsigned(0, 4));
         c_seg <= "00";
-        
         carga <= '1';
         WAIT FOR 20 ns;
         carga <= '0';
         WAIT FOR 60 ns;
 
         EA <= "10";
-        
-        WAIT UNTIL fim_quarto = '1'; 
-        
+        WAIT FOR 20 ns;
         EA <= "11";
         WAIT FOR 100 ns;
 
@@ -132,29 +135,61 @@ BEGIN
         EA <= "01";
         WAIT FOR 100 ns;
 
-        EA <= "10";
-        WAIT FOR 500 ns;
-        EA <= "11";
-        WAIT FOR 200 ns;
-        
-        c_quarto <= "11";
+        c_quarto <= "01";
         c_min <= std_logic_vector(to_unsigned(0, 4));
         c_seg <= "00";
-        
         carga <= '1';
         WAIT FOR 20 ns;
         carga <= '0';
         WAIT FOR 60 ns;
 
         EA <= "10";
-        WAIT UNTIL fim_quarto = '1';
+        WAIT FOR 20 ns;
         EA <= "11";
         WAIT FOR 100 ns;
 
         modo_novoquarto <= '1';
         WAIT FOR 20 ns;
         modo_novoquarto <= '0';
+        EA <= "01";
         WAIT FOR 100 ns;
+
+        c_quarto <= "10";
+        c_min <= std_logic_vector(to_unsigned(0, 4));
+        c_seg <= "00";
+        carga <= '1';
+        WAIT FOR 20 ns;
+        carga <= '0';
+        WAIT FOR 60 ns;
+
+        EA <= "10";
+        WAIT FOR 20 ns;
+        EA <= "11";
+        WAIT FOR 100 ns;
+
+        modo_novoquarto <= '1';
+        WAIT FOR 20 ns;
+        modo_novoquarto <= '0';
+        EA <= "01";
+        WAIT FOR 100 ns;
+
+        c_quarto <= "11";
+        c_min <= std_logic_vector(to_unsigned(0, 4));
+        c_seg <= "00";
+        carga <= '1';
+        WAIT FOR 20 ns;
+        carga <= '0';
+        WAIT FOR 60 ns;
+
+        EA <= "10";
+        WAIT FOR 20 ns;
+        EA <= "11";
+        WAIT FOR 200 ns;
+
+        modo_novoquarto <= '1';
+        WAIT FOR 20 ns;
+        modo_novoquarto <= '0';
+        WAIT FOR 200 ns;
 
         WAIT;
     END PROCESS;

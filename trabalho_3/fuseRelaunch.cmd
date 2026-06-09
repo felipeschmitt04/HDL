@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/ise/ise_projs/trabalho_3/tb_cont_isim_beh.exe" -prj "/home/ise/ise_projs/trabalho_3/tb_cont_beh.prj" "work.tb_cont" 
+-intstyle "ise" -incremental -o "/home/ise/ise_projs/trabalho_3/tb_fsm_isim_beh.exe" -prj "/home/ise/ise_projs/trabalho_3/tb_fsm_beh.prj" "work.tb_fsm" 

@@ -1,0 +1,58 @@
+V3 40
+FL /home/ise/ise_projs/trabalho_3/cont_cen.vhd 2026/06/09.23:05:47 P.20131013
+EN work/cont_cent 1781056589 FL /home/ise/ise_projs/trabalho_3/cont_cen.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/cont_cent/behavior 1781056590 \
+      FL /home/ise/ise_projs/trabalho_3/cont_cen.vhd EN work/cont_cent 1781056589
+FL /home/ise/ise_projs/trabalho_3/cont_min.vhd 2026/06/09.15:48:25 P.20131013
+EN work/cont_min 1781056593 FL /home/ise/ise_projs/trabalho_3/cont_min.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/cont_min/behavior 1781056594 \
+      FL /home/ise/ise_projs/trabalho_3/cont_min.vhd EN work/cont_min 1781056593
+FL /home/ise/ise_projs/trabalho_3/cont_quarto.vhd 2026/06/09.15:48:25 P.20131013
+EN work/cont_quarto 1781056595 FL /home/ise/ise_projs/trabalho_3/cont_quarto.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/cont_quarto/behavior 1781056596 \
+      FL /home/ise/ise_projs/trabalho_3/cont_quarto.vhd EN work/cont_quarto 1781056595
+FL /home/ise/ise_projs/trabalho_3/cont_seg.vhd 2026/06/09.15:48:25 P.20131013
+EN work/cont_seg 1781056591 FL /home/ise/ise_projs/trabalho_3/cont_seg.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/cont_seg/behavior 1781056592 \
+      FL /home/ise/ise_projs/trabalho_3/cont_seg.vhd EN work/cont_seg 1781056591
+FL /home/ise/ise_projs/trabalho_3/cron_basq_pi.vhd 2026/06/10.00:33:50 P.20131013
+EN work/cron_basq_PI 1781056599 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq_pi.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/cron_basq_PI/behavior 1781056600 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq_pi.vhd EN work/cron_basq_PI 1781056599 \
+      CP work/fsm CP work/divisor_clock CP work/cont_cent CP work/cont_seg \
+      CP work/cont_min CP work/cont_quarto
+FL /home/ise/ise_projs/trabalho_3/debounce.vhd 2026/05/21.14:00:18 P.20131013
+EN work/Debounce 1781056597 FL /home/ise/ise_projs/trabalho_3/debounce.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Debounce/Debounce 1781056598 \
+      FL /home/ise/ise_projs/trabalho_3/debounce.vhd EN work/Debounce 1781056597
+FL /home/ise/ise_projs/trabalho_3/divisor_clock.vhd 2026/06/09.19:03:46 P.20131013
+EN work/divisor_clock 1781056587 \
+      FL /home/ise/ise_projs/trabalho_3/divisor_clock.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/divisor_clock/behavior 1781056588 \
+      FL /home/ise/ise_projs/trabalho_3/divisor_clock.vhd EN work/divisor_clock 1781056587
+FL /home/ise/ise_projs/trabalho_3/dspl_drv.vhd 2026/06/09.17:01:51 P.20131013
+EN work/dspl_drv 1781056601 FL /home/ise/ise_projs/trabalho_3/dspl_drv.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dspl_drv/dspl_drv 1781056602 \
+      FL /home/ise/ise_projs/trabalho_3/dspl_drv.vhd EN work/dspl_drv 1781056601 \
+      CP with
+FL /home/ise/ise_projs/trabalho_3/fsm.vhd 2026/06/09.13:17:29 P.20131013
+EN work/fsm 1781056585 FL /home/ise/ise_projs/trabalho_3/fsm.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/fsm/behavior 1781056586 \
+      FL /home/ise/ise_projs/trabalho_3/fsm.vhd EN work/fsm 1781056585
+FL /home/ise/ise_projs/trabalho_3/top_cron_basq.vhd 2026/06/10.01:56:13 P.20131013
+EN work/top_cron_basq 1781056603 \
+      FL /home/ise/ise_projs/trabalho_3/top_cron_basq.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/top_cron_basq/behavior 1781056604 \
+      FL /home/ise/ise_projs/trabalho_3/top_cron_basq.vhd EN work/top_cron_basq 1781056603 \
+      CP work/Debounce CP work/cron_basq_PI CP work/dspl_drv

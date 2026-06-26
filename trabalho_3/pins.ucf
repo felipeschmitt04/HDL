@@ -1,0 +1,42 @@
+NET "clock" LOC = "T9";
+
+NET "reset" LOC = "J13";
+NET "reset" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "modo_novoquarto" LOC = "K14";
+NET "para_continua" LOC = "K13";
+NET "carga" LOC = "K12";
+
+NET "c_quarto[1]" LOC = "N16";
+NET "c_quarto[0]" LOC = "M15";
+
+NET "c_min[3]" LOC = "M16";
+NET "c_min[2]" LOC = "L15";
+NET "c_min[1]" LOC = "K15";
+NET "c_min[0]" LOC = "K16";
+
+NET "c_seg[1]" LOC = "J16";
+NET "c_seg[0]" LOC = "N15";
+
+NET "led_quarto[3]" LOC = "R16";
+NET "led_quarto[2]" LOC = "P14";
+NET "led_quarto[1]" LOC = "M13";
+NET "led_quarto[0]" LOC = "N14";
+
+NET "led_minutos[3]" LOC = "L12";
+NET "led_minutos[2]" LOC = "M14";
+NET "led_minutos[1]" LOC = "L13";
+NET "led_minutos[0]" LOC = "L14";
+
+NET "an[3]" LOC = "F12";
+NET "an[2]" LOC = "G13";
+NET "an[1]" LOC = "G12";
+NET "an[0]" LOC = "G14";
+
+NET "dec_ddp[7]" LOC = "F13";
+NET "dec_ddp[6]" LOC = "E13";
+NET "dec_ddp[5]" LOC = "G15";
+NET "dec_ddp[4]" LOC = "H13";
+NET "dec_ddp[3]" LOC = "J14";
+NET "dec_ddp[2]" LOC = "E14";
+NET "dec_ddp[1]" LOC = "G16";
+NET "dec_ddp[0]" LOC = "H14";

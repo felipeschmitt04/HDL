@@ -1,0 +1,43 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jun 10 01:57:50 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led_minutos<0>" LOCATE = SITE "L14" LEVEL 1;
+COMP "led_minutos<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "led_minutos<2>" LOCATE = SITE "M14" LEVEL 1;
+COMP "led_minutos<3>" LOCATE = SITE "L12" LEVEL 1;
+COMP "modo_novoquarto" LOCATE = SITE "K14" LEVEL 1;
+COMP "dec_ddp<0>" LOCATE = SITE "H14" LEVEL 1;
+COMP "dec_ddp<1>" LOCATE = SITE "G16" LEVEL 1;
+COMP "dec_ddp<2>" LOCATE = SITE "E14" LEVEL 1;
+COMP "dec_ddp<3>" LOCATE = SITE "J14" LEVEL 1;
+COMP "dec_ddp<4>" LOCATE = SITE "H13" LEVEL 1;
+COMP "dec_ddp<5>" LOCATE = SITE "G15" LEVEL 1;
+COMP "dec_ddp<6>" LOCATE = SITE "E13" LEVEL 1;
+COMP "dec_ddp<7>" LOCATE = SITE "F13" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "G14" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "G12" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "G13" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "F12" LEVEL 1;
+COMP "carga" LOCATE = SITE "K12" LEVEL 1;
+COMP "clock" LOCATE = SITE "T9" LEVEL 1;
+COMP "reset" LOCATE = SITE "J13" LEVEL 1;
+PIN reset_pin<0> = BEL "reset" PINNAME PAD;
+PIN "reset_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "para_continua" LOCATE = SITE "K13" LEVEL 1;
+COMP "c_min<0>" LOCATE = SITE "K16" LEVEL 1;
+COMP "c_min<1>" LOCATE = SITE "K15" LEVEL 1;
+COMP "c_min<2>" LOCATE = SITE "L15" LEVEL 1;
+COMP "c_min<3>" LOCATE = SITE "M16" LEVEL 1;
+COMP "c_seg<0>" LOCATE = SITE "N15" LEVEL 1;
+COMP "c_seg<1>" LOCATE = SITE "J16" LEVEL 1;
+COMP "led_quarto<0>" LOCATE = SITE "N14" LEVEL 1;
+COMP "led_quarto<1>" LOCATE = SITE "M13" LEVEL 1;
+COMP "led_quarto<2>" LOCATE = SITE "P14" LEVEL 1;
+COMP "led_quarto<3>" LOCATE = SITE "R16" LEVEL 1;
+COMP "c_quarto<0>" LOCATE = SITE "M15" LEVEL 1;
+COMP "c_quarto<1>" LOCATE = SITE "N16" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

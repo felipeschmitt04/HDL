@@ -1,0 +1,5 @@
+vhdl work "mult_div.vhd"
+vhdl work "MIPS_S_Prt.vhd"
+vhdl work "memory.vhd"
+vhdl work "MIPS_S_withBRAMs.vhd"
+vhdl work "MIPS_S_sem_perif_tb.vhd"

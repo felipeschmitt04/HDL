@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/ise_projs/trabalho_3/tb_cron_basq_PI_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_cron_basq_pi" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/tb_cron_basq_pi/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/para_continua" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">para_continua</obj_property>
+      <obj_property name="ObjectShortName">para_continua</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/modo_novoquarto" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">modo_novoquarto</obj_property>
+      <obj_property name="ObjectShortName">modo_novoquarto</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/carga" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">carga</obj_property>
+      <obj_property name="ObjectShortName">carga</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/c_quarto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_quarto[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c_quarto[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/c_min" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_min[3:0]</obj_property>
+      <obj_property name="ObjectShortName">c_min[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/c_seg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_seg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c_seg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/quarto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">quarto[1:0]</obj_property>
+      <obj_property name="ObjectShortName">quarto[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/minutos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">minutos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">minutos[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/segundos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">segundos[5:0]</obj_property>
+      <obj_property name="ObjectShortName">segundos[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cron_basq_pi/centesimos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">centesimos[6:0]</obj_property>
+      <obj_property name="ObjectShortName">centesimos[6:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,54 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ise_projs/trabalho_4/projeto_1/MIPS_S_withBRAMs_noPer_tb_isim_beh.exe -prj /home/ise/ise_projs/trabalho_4/projeto_1/MIPS_S_withBRAMs_noPer_tb_beh.prj work.MIPS_S_withBRAMs_noPer_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 3
+Turning on mult-threading, number of parallel sub-compilation jobs: 6 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/ise_projs/trabalho_4/projeto_1/mult_div.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_4/projeto_1/MIPS_S_Prt.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_4/projeto_1/memory.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_4/projeto_1/MIPS_S_withBRAMs.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_4/projeto_1/MIPS_S_sem_perif_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 147768 KB
+Fuse CPU Usage: 2280 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package p_mips_s
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
+Compiling architecture program_memory of entity program_memory [program_memory_default]
+Compiling package std_logic_signed
+Compiling architecture reg32bits of entity reg32bits [\reg32bits(('0','0','0','0','0',...]
+Compiling architecture reg32bits of entity reg32bits [reg32bits_default]
+Compiling architecture control_unit of entity control_unit [control_unit_default]
+Compiling architecture reg32bits of entity reg32bits [\reg32bits(('0','0','0','1','0',...]
+Compiling architecture reg_bank of entity reg_bank [reg_bank_default]
+Compiling architecture alu of entity alu [alu_default]
+Compiling architecture divider of entity divider [divider_default]
+Compiling architecture multiplier of entity multiplier [multiplier_default]
+Compiling architecture datapath of entity datapath [datapath_default]
+Compiling architecture mips_s of entity MIPS_S [mips_s_default]
+Compiling architecture ramb16_s9_v of entity RAMB16_S9 [\RAMB16_S9("000000000000","00000...]
+Compiling architecture ramb16_s9_v of entity RAMB16_S9 [\RAMB16_S9("000000000000","00000...]
+Compiling architecture ramb16_s9_v of entity RAMB16_S9 [\RAMB16_S9("000000000000","00000...]
+Compiling architecture ramb16_s9_v of entity RAMB16_S9 [\RAMB16_S9("000000000000","00000...]
+Compiling architecture data_mem_mod0 of entity data_mem_mod0 [data_mem_mod0_default]
+Compiling architecture data_mem_mod1 of entity data_mem_mod1 [data_mem_mod1_default]
+Compiling architecture data_memory of entity Data_Memory [data_memory_default]
+Compiling architecture mips_s_withbrams of entity MIPS_S_withBRAMs [mips_s_withbrams_default]
+Compiling architecture mips_s_withbrams_noper_tb of entity mips_s_withbrams_noper_tb
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 53 VHDL Units
+Built simulation executable /home/ise/ise_projs/trabalho_4/projeto_1/MIPS_S_withBRAMs_noPer_tb_isim_beh.exe
+Fuse Memory Usage: 608564 KB
+Fuse CPU Usage: 3990 ms
+GCC CPU Usage: 12640 ms

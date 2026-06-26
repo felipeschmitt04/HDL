@@ -1,0 +1,10 @@
+Command line:
+   tb_divisor_clock_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55587
+
+Tue Jun  9 19:55:24 2026
+
+
+ Elaboration Time: 0.16 sec

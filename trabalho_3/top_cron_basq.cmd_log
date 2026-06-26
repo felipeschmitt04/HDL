@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "/home/ise/ise_projs/trabalho_3/top_cron_basq.xst" -ofn "/home/ise/ise_projs/trabalho_3/top_cron_basq.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s200-ft256-4 top_cron_basq.ngc top_cron_basq.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_cron_basq_map.ncd top_cron_basq.ngd top_cron_basq.pcf 
+par -w -intstyle ise -ol high -t 1 top_cron_basq_map.ncd top_cron_basq.ncd top_cron_basq.pcf 
+xst -intstyle ise -ifn "/home/ise/ise_projs/trabalho_3/top_cron_basq.xst" -ofn "/home/ise/ise_projs/trabalho_3/top_cron_basq.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projs/trabalho_3/top_cron_basq.xst" -ofn "/home/ise/ise_projs/trabalho_3/top_cron_basq.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s200-ft256-4 top_cron_basq.ngc top_cron_basq.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_cron_basq_map.ncd top_cron_basq.ngd top_cron_basq.pcf 
+par -w -intstyle ise -ol high -t 1 top_cron_basq_map.ncd top_cron_basq.ncd top_cron_basq.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s200-ft256-4 top_cron_basq.ngc top_cron_basq.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_cron_basq_map.ncd top_cron_basq.ngd top_cron_basq.pcf 
+par -w -intstyle ise -ol high -t 1 top_cron_basq_map.ncd top_cron_basq.ncd top_cron_basq.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_cron_basq.twx top_cron_basq.ncd -o top_cron_basq.twr top_cron_basq.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f top_cron_basq.ut top_cron_basq.ncd 
+xst -intstyle ise -ifn "/home/ise/ise_projs/trabalho_3/top_cron_basq.xst" -ofn "/home/ise/ise_projs/trabalho_3/top_cron_basq.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s200-ft256-4 top_cron_basq.ngc top_cron_basq.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_cron_basq_map.ncd top_cron_basq.ngd top_cron_basq.pcf 
+par -w -intstyle ise -ol high -t 1 top_cron_basq_map.ncd top_cron_basq.ncd top_cron_basq.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_cron_basq.twx top_cron_basq.ncd -o top_cron_basq.twr top_cron_basq.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f top_cron_basq.ut top_cron_basq.ncd 
+xst -intstyle ise -ifn "/home/ise/ise_projs/trabalho_3/top_cron_basq.xst" -ofn "/home/ise/ise_projs/trabalho_3/top_cron_basq.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s200-ft256-4 top_cron_basq.ngc top_cron_basq.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_cron_basq_map.ncd top_cron_basq.ngd top_cron_basq.pcf 
+par -w -intstyle ise -ol high -t 1 top_cron_basq_map.ncd top_cron_basq.ncd top_cron_basq.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_cron_basq.twx top_cron_basq.ncd -o top_cron_basq.twr top_cron_basq.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f top_cron_basq.ut top_cron_basq.ncd 
+xst -intstyle ise -ifn "/home/ise/ise_projs/trabalho_3/top_cron_basq.xst" -ofn "/home/ise/ise_projs/trabalho_3/top_cron_basq.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s200-ft256-4 top_cron_basq.ngc top_cron_basq.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o top_cron_basq_map.ncd top_cron_basq.ngd top_cron_basq.pcf 
+par -w -intstyle ise -ol high -t 1 top_cron_basq_map.ncd top_cron_basq.ncd top_cron_basq.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml top_cron_basq.twx top_cron_basq.ncd -o top_cron_basq.twr top_cron_basq.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f top_cron_basq.ut top_cron_basq.ncd 

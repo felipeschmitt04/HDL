@@ -41,7 +41,7 @@ static void work_a_1834646810_2372691052_p_0(char *t0)
     int t10;
     char *t11;
 
-LAB0:    xsi_set_current_line(20, ng0);
+LAB0:    xsi_set_current_line(21, ng0);
     t1 = (t0 + 1192U);
     t2 = *((char **)t1);
     t3 = *((unsigned char *)t2);
@@ -59,7 +59,7 @@ LAB3:    t1 = (t0 + 3104);
     *((int *)t1) = 1;
 
 LAB1:    return;
-LAB2:    xsi_set_current_line(21, ng0);
+LAB2:    xsi_set_current_line(22, ng0);
     t1 = (t0 + 3184);
     t5 = (t1 + 56U);
     t6 = *((char **)t5);
@@ -67,7 +67,7 @@ LAB2:    xsi_set_current_line(21, ng0);
     t8 = *((char **)t7);
     *((int *)t8) = 0;
     xsi_driver_first_trans_fast(t1);
-    xsi_set_current_line(22, ng0);
+    xsi_set_current_line(23, ng0);
     t1 = (t0 + 3248);
     t2 = (t1 + 56U);
     t5 = *((char **)t2);
@@ -77,7 +77,7 @@ LAB2:    xsi_set_current_line(21, ng0);
     xsi_driver_first_trans_fast_port(t1);
     goto LAB3;
 
-LAB5:    xsi_set_current_line(24, ng0);
+LAB5:    xsi_set_current_line(25, ng0);
     t2 = (t0 + 1512U);
     t5 = *((char **)t2);
     t9 = *((int *)t5);
@@ -86,7 +86,7 @@ LAB5:    xsi_set_current_line(24, ng0);
     if (t4 != 0)
         goto LAB7;
 
-LAB9:    xsi_set_current_line(28, ng0);
+LAB9:    xsi_set_current_line(29, ng0);
     t1 = (t0 + 1512U);
     t2 = *((char **)t1);
     t9 = *((int *)t2);
@@ -98,7 +98,7 @@ LAB9:    xsi_set_current_line(28, ng0);
     t8 = *((char **)t7);
     *((int *)t8) = t10;
     xsi_driver_first_trans_fast(t1);
-    xsi_set_current_line(29, ng0);
+    xsi_set_current_line(30, ng0);
     t1 = (t0 + 3248);
     t2 = (t1 + 56U);
     t5 = *((char **)t2);
@@ -109,7 +109,7 @@ LAB9:    xsi_set_current_line(28, ng0);
 
 LAB8:    goto LAB3;
 
-LAB7:    xsi_set_current_line(25, ng0);
+LAB7:    xsi_set_current_line(26, ng0);
     t2 = (t0 + 3184);
     t6 = (t2 + 56U);
     t7 = *((char **)t6);
@@ -117,7 +117,7 @@ LAB7:    xsi_set_current_line(25, ng0);
     t11 = *((char **)t8);
     *((int *)t11) = 0;
     xsi_driver_first_trans_fast(t2);
-    xsi_set_current_line(26, ng0);
+    xsi_set_current_line(27, ng0);
     t1 = (t0 + 3248);
     t2 = (t1 + 56U);
     t5 = *((char **)t2);

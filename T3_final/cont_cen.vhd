@@ -1,0 +1,49 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY cont_cent IS
+    PORT(
+        clock: IN std_logic;
+        reset: IN std_logic;
+        fim_quarto: IN std_logic;
+        EA: IN std_logic_vector(1 DOWNTO 0);
+        passou_1cent: IN std_logic;
+        modo_novoquarto: IN std_logic;
+        carga: IN std_logic;
+        centesimos: OUT std_logic_vector(6 DOWNTO 0);
+        passou_1seg: OUT std_logic;
+        fim_jogo: IN std_logic
+    );
+END ENTITY cont_cent;
+
+ARCHITECTURE behavior OF cont_cent IS
+    SIGNAL conta_cent: integer RANGE 0 TO 99 := 0;
+BEGIN
+    PROCESS(clock, reset)
+    BEGIN
+        IF reset = '1' THEN
+            conta_cent <= 0;
+        ELSIF rising_edge(clock) THEN
+            IF fim_jogo = '0' THEN
+                IF carga = '1' AND (EA = "01" OR EA = "11") THEN
+                    conta_cent <= 0;
+                ELSIF EA = "11" THEN
+                    IF modo_novoquarto = '1' THEN
+                        conta_cent <= 0;
+                    END IF;
+                ELSIF EA = "10" THEN
+                    IF passou_1cent = '1' AND fim_quarto = '0' THEN
+                        IF conta_cent = 0 THEN
+                            conta_cent <= 99;
+                        ELSE
+                            conta_cent <= conta_cent - 1;
+                        END IF;
+                    END IF;
+                END IF;
+            END IF;
+        END IF;
+    END PROCESS;
+    centesimos <= std_logic_vector(to_unsigned(conta_cent, 7));
+    passou_1seg <= '1' WHEN (conta_cent = 0 AND passou_1cent = '1' AND EA = "10") ELSE '0';
+END behavior;

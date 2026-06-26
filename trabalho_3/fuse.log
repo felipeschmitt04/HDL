@@ -1,22 +1,43 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ise_projs/trabalho_3/tb_fsm_isim_beh.exe -prj /home/ise/ise_projs/trabalho_3/tb_fsm_beh.prj work.tb_fsm 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ise_projs/trabalho_3/tb_top_cron_basq_isim_beh.exe -prj /home/ise/ise_projs/trabalho_3/tb_top_cron_basq_beh.prj work.tb_top_cron_basq 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 3
 Turning on mult-threading, number of parallel sub-compilation jobs: 6 
 Determining compilation order of HDL files
 Parsing VHDL file "/home/ise/ise_projs/trabalho_3/fsm.vhd" into library work
-Parsing VHDL file "/home/ise/ise_projs/trabalho_3/fsm_tb.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/divisor_clock.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_seg.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_quarto.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_min.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cont_cen.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/dspl_drv.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/debounce.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/cron_basq_pi.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/top_cron_basq.vhd" into library work
+Parsing VHDL file "/home/ise/ise_projs/trabalho_3/top_cron_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 95320 KB
-Fuse CPU Usage: 1260 ms
+Fuse Memory Usage: 98628 KB
+Fuse CPU Usage: 1370 ms
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture debounce of entity Debounce [debounce_default]
 Compiling architecture behavior of entity fsm [fsm_default]
-Compiling architecture behavior of entity tb_fsm
+Compiling architecture behavior of entity divisor_clock [\divisor_clock(500000)\]
+Compiling architecture behavior of entity cont_cent [cont_cent_default]
+Compiling architecture behavior of entity cont_seg [cont_seg_default]
+Compiling architecture behavior of entity cont_min [cont_min_default]
+Compiling architecture behavior of entity cont_quarto [cont_quarto_default]
+Compiling architecture behavior of entity cron_basq_PI [cron_basq_pi_default]
+Compiling architecture dspl_drv of entity dspl_drv [dspl_drv_default]
+Compiling architecture behavior of entity top_cron_basq [top_cron_basq_default]
+Compiling architecture behavior of entity tb_top_cron_basq
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 VHDL Units
-Built simulation executable /home/ise/ise_projs/trabalho_3/tb_fsm_isim_beh.exe
-Fuse Memory Usage: 527936 KB
-Fuse CPU Usage: 1390 ms
-GCC CPU Usage: 350 ms
+Compiled 26 VHDL Units
+Built simulation executable /home/ise/ise_projs/trabalho_3/tb_top_cron_basq_isim_beh.exe
+Fuse Memory Usage: 541608 KB
+Fuse CPU Usage: 1950 ms
+GCC CPU Usage: 2880 ms

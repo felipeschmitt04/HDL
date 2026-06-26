@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/ise_projs/trabalho_3/tb_top_cron_basq_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="tb_top_cron_basq" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb_top_cron_basq/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/carga" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">carga</obj_property>
+      <obj_property name="ObjectShortName">carga</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/para_continua" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">para_continua</obj_property>
+      <obj_property name="ObjectShortName">para_continua</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/modo_novoquarto" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">modo_novoquarto</obj_property>
+      <obj_property name="ObjectShortName">modo_novoquarto</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/c_quarto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_quarto[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c_quarto[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/c_min" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_min[3:0]</obj_property>
+      <obj_property name="ObjectShortName">c_min[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/c_seg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_seg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">c_seg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/led_quarto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">led_quarto[3:0]</obj_property>
+      <obj_property name="ObjectShortName">led_quarto[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/an" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">an[3:0]</obj_property>
+      <obj_property name="ObjectShortName">an[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_cron_basq/dec_ddp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dec_ddp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_ddp[7:0]</obj_property>
+   </wvobject>
+</wave_config>
